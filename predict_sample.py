@@ -4,7 +4,7 @@ from aesthetic_predictor import AestheticPredictor
 
 args = argparse.ArgumentParser()
 args.add_argument("--source_dir", type=str, default=".", help="path to the image dir")
-args.add_argument("--model_path", type=str, default="sac+logos+ava1-l14-linearMSE.pth", help="path to the model")
+args.add_argument("--model_path", type=str, default="models/sac+logos+ava1-l14-linearMSE.pth", help="path to the model")
 opt = args.parse_args()
 
 def create_source_list(source_dir):
