@@ -15,8 +15,7 @@ class AestheticPredictor():
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.model2, self.preprocess = clip.load("ViT-L/14", device=self.device)  #RN50x64   
 
-    def predict(self, path):
-        pil_image = Image.open(path)
+    def predict(self, pil_image: Image):
         image = self.preprocess(pil_image).unsqueeze(0).to(self.device)
 
         with torch.no_grad():
