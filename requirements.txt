@@ -1,0 +1,10 @@
+webdataset
+Pillow
+matplotlib
+numpy
+datasets
+tqdm
+pandas
+pytorch_lightning
+
+git+https://github.com/openai/CLIP.git
