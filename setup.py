@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='aesthetic-predictor',
+    name='aesthetic_predictor',
     version='1.0',
     description='',
     packages=find_packages(),
