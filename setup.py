@@ -7,6 +7,9 @@ setup(
     packages=find_packages(),
     install_requires=[
         'torch',
-        'numpy'
+        'numpy',
+        'pytorch_lightning',
+        'Pillow',
+
     ],
 )
