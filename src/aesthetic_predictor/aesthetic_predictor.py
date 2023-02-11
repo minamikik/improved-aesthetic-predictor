@@ -9,10 +9,8 @@ from PIL import Image
 class AestheticPredictor():
     def __init__(self, model_name = "sac+logos+ava1-l14-linearMSE.pth"):
 
-        self.cache_dir = "cache"
-        os.makedirs(self.cache_dir, exist_ok=True)
         self.model_name = model_name
-        self.model_path = os.path.abspath(os.path.join(self.cache_dir, self.model_name))
+        self.model_path = os.path.abspath(os.path.join(self.model_name))
         if not os.path.exists(self.model_path):
             self.download_model()
 
