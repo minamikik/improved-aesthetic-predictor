@@ -5,6 +5,9 @@ import torch
 import pytorch_lightning as pl
 import torch.nn as nn
 from PIL import Image
+from logging import getLogger
+logger = getLogger(__name__)
+logger.level = 20
 
 class AestheticPredictor():
     def __init__(self, model_path = "sac+logos+ava1-l14-linearMSE.pth"):
