@@ -7,10 +7,10 @@ import torch.nn as nn
 from PIL import Image
 
 class AestheticPredictor():
-    def __init__(self, model_path = "sac+logos+ava1-l14-linearMSE.pth"):
+    def __init__(self, model_path="cache", model_name="sac+logos+ava1-l14-linearMSE.pth"):
 
-        self.model_path = model_path
-        self.model_path = os.path.abspath(os.path.join(self.model_path))
+        self.model_name = model_name
+        self.model_path = os.path.abspath(os.path.join(model_path, model_name))
         if not os.path.exists(self.model_path):
             self.download_model()
 
