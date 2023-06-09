@@ -7,7 +7,7 @@ import torch.nn as nn
 from PIL import Image
 
 class AestheticPredictor():
-    def __init__(self, model_path="cache", model_name="sac+logos+ava1-l14-linearMSE.pth"):
+    def __init__(self, model_path="cache", model_name="sac+logos+ava1-l14-linearMSE.pth", device="cuda"):
 
         self.model_name = model_name
         self.model_path = os.path.abspath(os.path.join(model_path, model_name))
@@ -20,7 +20,7 @@ class AestheticPredictor():
         self.model.to("cuda")
         self.model.eval()
 
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.device = device
         self.model2, self.preprocess = clip.load("ViT-L/14", device=self.device)  #RN50x64
 
     def download_model(self):
